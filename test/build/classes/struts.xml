@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 指定Struts 2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 配置Struts 2配置文件的根元素 -->
+<struts>
+	<!-- Struts 2的Action必须放在指定的包空间下定义 -->
+	<package name="tutorial" extends="struts-default">
+	
+		
+		
+		
+		<action name="login" class="Action.Login">
+			<!-- 定义处理结果和视图资源之间映射关系 -->
+			<result name="success">/essay.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="register" class="Action.RegisterAction" >
+			<!-- 定义处理结果和视图资源之间映射关系 -->
+			<result name="success">/welcome.jsp</result>
+			<result name="login">/index.jsp</result>
+		</action>
+		<action name="Publish" class="Action.Publish">
+			<!-- 定义处理结果和视图资源之间映射关系 -->
+			<result name="success">/essay.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		
+		
+		
+		
+	</package>
+</struts>
